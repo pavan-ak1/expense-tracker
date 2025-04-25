@@ -1,6 +1,7 @@
 const expenseForm = document.getElementById('expenseForm');
 const expenseList = document.getElementById('expenseList');
 const submitButton = expenseForm.querySelector('button[type="submit"]');
+const totalAmountElement = document.getElementById('totalAmount');
 
 // Function to show loading state
 const setLoading = (isLoading) => {
@@ -15,6 +16,12 @@ const showAlert = (message, type = 'error') => {
     alertDiv.textContent = message;
     expenseForm.insertBefore(alertDiv, submitButton);
     setTimeout(() => alertDiv.remove(), 3000);
+};
+
+// Function to update total amount
+const updateTotalAmount = (expenses) => {
+    const total = expenses.reduce((sum, expense) => sum + expense.amount, 0);
+    totalAmountElement.textContent = `$${total.toFixed(2)}`;
 };
 
 // Function to delete an expense
@@ -81,6 +88,8 @@ const fetchExpenses = async () => {
                 `;
                 expenseList.appendChild(newRow);
             });
+            // Update total amount
+            updateTotalAmount(data.expenses);
         } else {
             showAlert(data.error || 'Failed to fetch expenses');
         }

@@ -378,4 +378,39 @@ tr:hover {
 .delete-btn i {
   font-size: 1rem;
 }
+
+/* Expense Summary */
+.expense-summary {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 1.5rem;
+}
+
+.expense-summary h3 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.total-expense {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: var(--light-color);
+  border-radius: var(--border-radius);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.total-expense span:first-child {
+  color: var(--secondary-color);
+}
+
+.total-expense span:last-child {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+}
   
