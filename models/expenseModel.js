@@ -17,7 +17,12 @@ const expenseSchema = new mongoose.Schema({
         type:Number,
         required: [true, 'Amount is required'],
         min: [0, 'Amount cannot be negative'],
-    }
+    },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+      }
 
 })
  module.exports = mongoose.model('Expense',expenseSchema);

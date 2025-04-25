@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup - Task Manager</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h2>Create Account</h2>
+          <p>Join us to manage your tasks efficiently</p>
+        </div>
+        <form class="signup-form">
+          <div class="form-group">
+            <label for="name">
+              <i class="fas fa-user"></i>
+              Name
+            </label>
+            <input type="text" id="name" name="name" class="auth-input" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">
+              <i class="fas fa-envelope"></i>
+              Email
+            </label>
+            <input type="email" id="email" name="email" class="auth-input" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label for="password">
+              <i class="fas fa-lock"></i>
+              Password
+            </label>
+            <input type="password" id="password" name="password" class="auth-input" placeholder="Enter your password" required />
+          </div>
+          <button type="submit" class="btn auth-btn">
+            <i class="fas fa-user-plus"></i>
+            Sign Up
+          </button>
+          <div class="auth-alert"></div>
+          <div class="auth-footer">
+            <p>Already have an account? <a href="./login.html">Login</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./signup.js"></script>
+  </body>
+</html>

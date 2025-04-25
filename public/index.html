@@ -4,39 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <div class="container">
         <form id="expenseForm">
-            <input type="text" id="description" placeholder="Expense Description"><br>
-            <select  id="category">
-                <option value="">Select Category</option>
-                <option value="Food">Food</option>
-                <option value="Transportation">Transportation</option>
-                <option value="utilities">Utilities</option>
-                <option value="entertainment">Entertainment</option>\
-                <option value="others">Others</option>
-            </select><br>
-
-            <input type="number" id="amount" placeholder="Amount" required><br>
-            <input type="submit" value=" Add Expense" class="submit">
-
+            <div class="form-group">
+                <label for="description">
+                    <i class="fas fa-pencil-alt"></i>
+                    Description
+                </label>
+                <input type="text" id="description" placeholder="Expense Description" required>
+            </div>
+            <div class="form-group">
+                <label for="category">
+                    <i class="fas fa-tag"></i>
+                    Category
+                </label>
+                <select id="category" required>
+                    <option value="">Select Category</option>
+                    <option value="Food">Food</option>
+                    <option value="Transportation">Transportation</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="amount">
+                    <i class="fas fa-dollar-sign"></i>
+                    Amount
+                </label>
+                <input type="number" id="amount" placeholder="Amount" required>
+            </div>
+            <button type="submit" class="auth-btn">
+                <i class="fas fa-plus"></i>
+                Add Expense
+            </button>
         </form>
-        <h3>Expense Summary</h3>
-        <table id="expenseTable">
-            <thead>
-                <tr>
-                    <th>Description</th>
-                    <th>Category</th>
-                    <th>Amount</th>
-                </tr>
-                
-            </thead>
-            <tbody id="expenseList">
 
-            </tbody>
-        </table>
+        <h3>Expense Summary</h3>
+        <div class="table-container">
+            <table id="expenseTable">
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="expenseList">
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="./index.js"></script>
 </body>
