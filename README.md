@@ -178,7 +178,7 @@ Project Link: https://github.com/yourusername/expense-tracker
 - **Frontend**: [HTML,CSS,JS]
 - **Backend**: [Node.js / Express]
 - **Database**: [MongoDB]
-- **Cloud Hosting**: [Vercel]
+- **Cloud Hosting**: [Render]
 
 
 
